@@ -1,0 +1,12 @@
+{
+  "name": "winnix",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "vercel dev",
+    "build": "echo \"no build step\""
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}
