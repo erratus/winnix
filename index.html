@@ -11,7 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
         rel="stylesheet" />
     <style>
-         /* ─────────────────────────────────────
+        /* ─────────────────────────────────────
    TOKENS
 ───────────────────────────────────── */
         :root {
@@ -3312,6 +3312,7 @@
                         }
 
                         @media (prefers-reduced-motion: reduce) {
+
                             .product-detail-overlay,
                             .product-detail-overlay .product-detail-page,
                             .product-detail-overlay .product-media-arrow,
@@ -3346,16 +3347,15 @@
 
         <div class="product-slider-wrap">
             <div class="product-slider-controls" aria-hidden="true">
-                <button class="product-slider-btn product-slider-btn-left" type="button"
-                    onclick="scrollProducts(-1)" aria-label="Scroll products left">‹</button>
-                <button class="product-slider-btn product-slider-btn-right" type="button"
-                    onclick="scrollProducts(1)" aria-label="Scroll products right">›</button>
+                <button class="product-slider-btn product-slider-btn-left" type="button" onclick="scrollProducts(-1)"
+                    aria-label="Scroll products left">‹</button>
+                <button class="product-slider-btn product-slider-btn-right" type="button" onclick="scrollProducts(1)"
+                    aria-label="Scroll products right">›</button>
             </div>
             <div class="product-slider">
 
                 <div class="product-card" onclick="openProduct(0)">
-                    <img class="product-card-img" src="https://placehold.co/600x600/EDECEA/1C1E22?text=WINIX+A231"
-                        alt="WINIX A231">
+                    <img class="product-card-img" src="assets/A321/A231.png" alt="WINIX A231">
                     <div class="product-card-body">
                         <div class="product-card-name">WINIX A231</div>
                         <div class="product-card-overview">Allergy-certified compact purifier, ideal for study, kids’
@@ -3369,8 +3369,7 @@
                 </div>
 
                 <div class="product-card" onclick="openProduct(1)">
-                    <img class="product-card-img" src="https://placehold.co/600x600/EDECEA/1C1E22?text=WINIX+5500-2"
-                        alt="WINIX 5500-2">
+                    <img class="product-card-img" src="assets/5500-2/5500-2.webp" alt="WINIX 5500-2">
                     <div class="product-card-body">
                         <div class="product-card-name">WINIX 5500-2</div>
                         <div class="product-card-overview">Captures 99.97% particles with True HEPA and tackles VOCs
@@ -3384,8 +3383,7 @@
                 </div>
 
                 <div class="product-card" onclick="openProduct(2)">
-                    <img class="product-card-img" src="https://placehold.co/600x600/EDECEA/1C1E22?text=WINIX+5300-2"
-                        alt="WINIX 5300-2">
+                    <img class="product-card-img" src="assets/5300-2/5300-2.webp" alt="WINIX 5300-2">
                     <div class="product-card-body">
                         <div class="product-card-name">WINIX 5300-2</div>
                         <div class="product-card-overview">4-stage filtration with True HEPA, deodorization, auto mode
@@ -3399,8 +3397,7 @@
                 </div>
 
                 <div class="product-card" onclick="openProduct(3)">
-                    <img class="product-card-img" src="https://placehold.co/600x600/EDECEA/1C1E22?text=WINIX+T800"
-                        alt="WINIX T800">
+                    <img class="product-card-img" src="assets/T800/t800.webp" alt="WINIX T800">
                     <div class="product-card-body">
                         <div class="product-card-name">WINIX T800</div>
                         <div class="product-card-overview">Large Room Air Purifier 1968 Sq Ft Coverage, Smokers & Dusty
@@ -3414,8 +3411,7 @@
                 </div>
 
                 <div class="product-card" onclick="openProduct(4)">
-                    <img class="product-card-img" src="https://placehold.co/600x600/EDECEA/1C1E22?text=WINIX+T500"
-                        alt="WINIX T500">
+                    <img class="product-card-img" src="assets/T500/T500.webp" alt="WINIX T500">
                     <div class="product-card-body">
                         <div class="product-card-name">WINIX T500</div>
                         <div class="product-card-overview">Compact design with 360° suction, multi-stage filtration and
@@ -4403,8 +4399,8 @@
             { n: 'Chennai', v: 90 }, { n: 'Hyderabad', v: 92 }, { n: 'Ahmedabad', v: 112 }
         ];
         function aqiColor(v) { return v >= 160 ? 'var(--aqi-red)' : v >= 120 ? 'var(--aqi-orange)' : 'var(--aqi-amber)' }
-                function buildHeroSVG() {
-                        return `<svg viewBox="0 0 760 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="WINIX hero fallback illustration">
+        function buildHeroSVG() {
+            return `<svg viewBox="0 0 760 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="WINIX hero fallback illustration">
     <defs>
         <linearGradient id="heroBg" x1="0" y1="0" x2="1" y2="1">
             <stop offset="0%" stop-color="#f7f5f1"/>
@@ -4421,7 +4417,7 @@
     <path d="M286 586c34-25 68-38 94-38s60 13 94 38" fill="none" stroke="#1c1e22" stroke-opacity=".12" stroke-width="10" stroke-linecap="round"/>
     <text x="380" y="640" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="26" letter-spacing="8" fill="#1c1e22" opacity=".55">WINIX</text>
 </svg>`;
-                }
+        }
         (function () {
             const wrap = document.getElementById('aqiCitiesEl');
             AQI_DATA.forEach(c => {
@@ -4787,6 +4783,73 @@
             const details = encodeURIComponent(`${name} detail`);
             const inUse = encodeURIComponent(`${name} in use`);
             const closeUp = encodeURIComponent(`${name} close up`);
+
+            if (name.includes('A231') || name.includes('A321') || primaryImage.includes('A321') || primaryImage.includes('A231')) {
+                return [
+                    'assets/A321/A231.png',
+                    'assets/A321/2.webp',
+                    'assets/A321/3.webp',
+                    'assets/A321/4.webp',
+                    'assets/A321/5.webp',
+                    'assets/A321/6.webp',
+                    'assets/A321/7.webp',
+                    'assets/A321/8.webp'
+                ];
+            }
+
+
+            if (name.includes('5500-2') || name.includes('5500-2') || primaryImage.includes('5500-2') || primaryImage.includes('5500-2')) {
+                return [
+                    'assets/5500-2/5500-2.webp',
+                    'assets/5500-2/2.webp',
+                    'assets/5500-2/3.webp',
+                    'assets/5500-2/4.webp',
+                    'assets/5500-2/5.webp',
+                    'assets/5500-2/6.webp',
+                    'assets/5500-2/7.webp',
+                    'assets/5500-2/8.webp'
+                ];
+            }
+
+            if (name.includes('5300-2') || name.includes('5300-2') || primaryImage.includes('5300-2') || primaryImage.includes('5300-2')) {
+                return [
+                    'assets/5300-2/5300-2.webp',
+                    'assets/5300-2/2.webp',
+                    'assets/5300-2/3.webp',
+                    'assets/5300-2/4.webp',
+                    'assets/5300-2/5.webp',
+                    'assets/5300-2/6.webp',
+                    'assets/5300-2/7.webp',
+                    'assets/5300-2/8.webp'
+                ];
+            }
+
+            if (name.includes('T800') || name.includes('T800') || primaryImage.includes('T800') || primaryImage.includes('T800')) {
+                return [
+                    'assets/T800/t800.webp',
+                    'assets/T800/2.webp',
+                    'assets/T800/3.webp',
+                    'assets/T800/4.webp',
+                    'assets/T800/5.webp',
+                    'assets/T800/6.webp',
+                    'assets/T800/7.webp',
+                    'assets/T800/8.webp'
+                ];
+            }
+
+            if (name.includes('T500') || name.includes('T500') || primaryImage.includes('T500') || primaryImage.includes('T500')) {
+                return [
+                    'assets/T500/T500.webp',
+                    'assets/T500/2.webp',
+                    'assets/T500/3.webp',
+                    'assets/T500/4.webp',
+                    'assets/T500/5.webp',
+                    'assets/T500/6.webp',
+                    'assets/T500/7.webp',
+                    'assets/T500/8.webp',
+                    'assets/T500/9.webp'
+                ];
+            }
 
             return [
                 primaryImage || `https://placehold.co/1200x1200/F4F2EE/1C1E22?text=${safeLabel}`,
