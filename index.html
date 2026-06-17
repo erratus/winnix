@@ -3252,20 +3252,32 @@
                             .product-detail-overlay .product-detail-page {
                                 grid-template-columns: 1fr;
                                 max-height: calc(100vh - 24px);
+                                overflow-y: auto;
                             }
 
                             .product-detail-overlay .product-detail-media {
                                 position: static;
                             }
 
-                            .product-detail-overlay .product-benefits,
-                            .product-detail-overlay .product-trust {
+                            .product-detail-overlay .product-benefits {
                                 grid-template-columns: 1fr;
+                            }
+
+                            .product-detail-overlay .product-trust {
+                                grid-template-columns: repeat(2, 1fr);
                             }
 
                             .product-detail-overlay .product-detail-content {
                                 padding: 0 28px 28px;
                                 max-height: none;
+                                overflow-y: visible;
+                            }
+
+                            .product-detail-overlay .product-detail-content .product-detail-close {
+                                position: absolute;
+                                top: 16px;
+                                right: 16px;
+                                z-index: 10;
                             }
                         }
 
@@ -3278,6 +3290,7 @@
                                 max-height: calc(100vh - 20px);
                                 border-radius: 22px;
                                 padding: 18px;
+                                overflow-y: auto;
                             }
 
                             .product-detail-overlay .product-detail-media {
@@ -3290,7 +3303,7 @@
                             }
 
                             .product-detail-overlay .product-thumbs {
-                                grid-template-columns: repeat(2, minmax(0, 1fr));
+                                grid-template-columns: repeat(4, minmax(0, 1fr));
                             }
 
                             .product-detail-overlay .product-detail-header {
